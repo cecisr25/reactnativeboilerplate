@@ -8,7 +8,7 @@ This is a react native boilerplate with the basics, navigation, push notificatio
 
 ### Prerequisites
 
-* [React native Getting Started](https://reactnative.dev/docs/environment-setup) - Take a look at the environment setup.
+* [React native Environment setup](https://reactnative.dev/docs/environment-setup) - Take a look at the environment setup.
 But just to start, node 12 is required, and the expo cli:
 
 ```
@@ -28,7 +28,6 @@ or
 ```
 npm i
 ```
-
 
 ## Starting the project
 
