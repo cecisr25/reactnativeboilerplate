@@ -1,13 +1,14 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import _ from 'lodash';
 
-import HomeScreen from './screens/Home';
-import SettingsScreen from './screens/Settings';
-import IScreen from './screens/IScreen';
+import HomeScreen from './src/screens/Home';
+import SettingsScreen from './src/screens/Settings';
+import ItemsScreen from './src/screens/Items';
+import IScreen from './src/screens/IScreen';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -19,9 +20,15 @@ const screens: IScreen[] = [
     iconSize: 32,
   },
   {
-    name: 'Example',
+    name: 'Items',
+    component: ItemsScreen,
+    icon: 'ios-list',
+    iconSize: 32,
+  },
+  {
+    name: 'Settings',
     component: SettingsScreen,
-    icon: 'ios-time',
+    icon: 'ios-settings',
     iconSize: 32,
   },
 ];
