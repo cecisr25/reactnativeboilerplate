@@ -1,0 +1,6 @@
+module Pods_ReactNativeBoilerplate {
+  umbrella header "Pods-ReactNativeBoilerplate-umbrella.h"
+
+  export *
+  module * { export * }
+}

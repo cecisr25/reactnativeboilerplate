@@ -1,14 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/Ionicons';
 import _ from 'lodash';
 
 import HomeScreen from './src/screens/Home';
 import SettingsScreen from './src/screens/Settings';
 import ItemsScreen from './src/screens/Items';
 import IScreen from './src/screens/IScreen';
-
 
 const Tab = createBottomTabNavigator();
 
@@ -42,12 +41,12 @@ export default function App() {
             tabBarIcon: () => {
               const name = _.get(route, 'name', false);
               const focusedScreen: IScreen = _.find(screens, { name }) as IScreen;
-              return <Ionicons name={focusedScreen.icon} size={focusedScreen.iconSize}/>;
+              return <Icon name={focusedScreen.icon} size={focusedScreen.iconSize}/>;
             },
           })
         }>
         {
-          _.map(screens,(tab, id) => {
+          _.map(screens,(tab: IScreen, id: number) => {
             return (
               <Tab.Screen
                 name={tab.name}
